@@ -12,7 +12,19 @@ header {
 
 
 /* navbar  */
-
+.resume{
+    border: 3px solid #eee;
+    color:#eee;
+    background: black;
+    display: inline-block;
+    font-size: 20px;
+}
+.resume:hover {
+    color: #70aed2;
+    transition: .4s;
+    font-size:25px;
+    background-color: white;
+}
 .nav-menu {
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5));
     padding: 30px;
