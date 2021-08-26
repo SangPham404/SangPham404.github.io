@@ -12,7 +12,7 @@ header {
 
 
 /* navbar  */
-.resume{
+.resume {
     border: 3px solid #eee;
     color:#eee;
     background: black;
@@ -26,22 +26,22 @@ header {
     background-color: white;
 }
 
-.portfolios-head{
+.portfolios-head {
     color:#70aed2;
     text-decoration: none;
     font-size: 35px;
 }
-a .portfolios-head:hover{
+.portfolios-head:hover {
     font-size:40px;
     transition: .4s;
     text-decoration: none;
 }
-.portfolios-head:active{
+.portfolios-head:active {
     color:#70aed2;
     text-decoration: none;
     font-size: 35px;
 }
-.portfolios-deco{
+.portfolios-deco {
     
     margin-top: 1%;
     margin-left: 4%;
