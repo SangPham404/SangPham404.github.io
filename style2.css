@@ -25,6 +25,28 @@ header {
     font-size:25px;
     background-color: white;
 }
+
+.portfolios-head{
+    color:#70aed2;
+    text-decoration: none;
+    font-size: 35px;
+}
+a .portfolios-head:hover{
+    font-size:40px;
+    transition: .4s;
+    text-decoration: none;
+}
+.portfolios-head:active{
+    color:#70aed2;
+    text-decoration: none;
+    font-size: 35px;
+}
+.portfolios-deco{
+    
+    margin-top: 1%;
+    margin-left: 4%;
+}
+
 .nav-menu {
     background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, .5));
     padding: 30px;
