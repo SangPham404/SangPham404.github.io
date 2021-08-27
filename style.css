@@ -129,9 +129,9 @@ section {
     font-size: 35px;
 }
 .portfolios-head:hover {
-    font-size:40px;
+
     transition: .4s;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .portfolios-head:active {
     color:#70aed2;
@@ -155,4 +155,11 @@ section {
 #about .card {
     background-color: #2f3030;
     height: fit-content;
+}
+#about .lineedu {
+    margin-bottom:5%;
+    
+}
+#about li {
+    font-size:15px;
 }
