@@ -16,16 +16,20 @@
     <!-- Title -->
     <script src="script.js"></script>
     <title>SangPham404</title>
-
+    <script>
+        $(document).ready(function(){
+            $('#kil').animate({right:"+=300"},"slow")
+        });
+    </script>
 </head>
 <body data-spy="scroll" data-target="#myNavbar" data-offset="10">
-    <header>
+    <header id="header" >
         <!-- navbar -->
         <nav class="navbar fixed-top navbar-expand-lg nav-menu">
             <div class="collapse text-center navbar-collapse justify-content-end font-weight-bold" id="myNavbar">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link menu-item active">Home</a>
+                        <a href="#header" class="nav-link menu-item active">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#whatido" class="nav-link menu-item">What I do</a>
@@ -36,9 +40,7 @@
                     <li class="nav-item">
                         <a href="#about" class="nav-link  menu-item">About me</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#contact" class="nav-link  menu-item">Contact</a>
-                    </li>
+                    
                     
                 </ul>
             </div>
@@ -67,7 +69,7 @@
                     </ul>
                 </div>
                 <div class="column pic text-right">
-                    <img src="img/title-img1.png" style="border-radius: 5px;" >
+                    <img id="kil"src="img/title-img1.png" style="border-radius: 5px;" >
                 </div>
             </div>
         </div>
@@ -318,8 +320,6 @@
 
     </div>
 
-    <div id="contact">
-
-    </div>
+   
 </body>
 </html>

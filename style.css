@@ -163,3 +163,54 @@ section {
 #about li {
     font-size:15px;
 }
+
+@keyframes anim {
+    0% {
+        transform: translateX(200px) ;
+        opacity: 0;
+    }
+    100% {
+        transform:translate(0);
+        opacity: 1;
+    }
+}
+@keyframes anim2 {
+    0% {
+        transform: translateX(-200px) ;
+        opacity: 0;
+    }
+    100% {
+        transform:translate(0);
+        opacity: 1;
+    }
+}
+@keyframes anim3 {
+    0% {
+        
+        opacity: 0;
+    }
+    100% {
+       
+        opacity: 1;
+    }
+}
+
+#kil {
+    animation-name: anim;
+    animation-duration: 2s;
+
+}
+ #home h1,h2,h3 {
+    animation-name: anim2;
+    animation-duration: 2s;
+}
+
+ #home li{
+    animation-name: anim3;
+    animation-duration: 3s;
+}
+
+.changaeing {
+    animation-name: anim3;
+    animation-duration: 3s;
+}
