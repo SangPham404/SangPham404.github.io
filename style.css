@@ -239,9 +239,7 @@ section {
 }
 @media only screen and (min-width:280px) and (max-width:500px)
 {
-    body{
-        width: device-width;
-    }
+    
     header{
         margin-bottom: -10vh;
     }
@@ -274,19 +272,17 @@ section {
        display: inline-block;
        margin-left: -8vh;
    }
-   #about div>span {
-       margin: 5vh;
-   }
+  #about div>span {
+      margin-top: 3px;
+  }
    #portfolios .card {
        height:fit-content;  
    }
+   
 }
 @media only screen and (min-width:500px) and (max-width:720px)
 {
-    body{
-        width: device-width;
-      
-    }
+    
     header{
         margin-bottom: -10vh;
     }
@@ -329,7 +325,8 @@ section {
    }
   
    #whatido p{
-      margin-left: 10wh;
+      margin-left: 10vw;
    }
+  
    
 }
