@@ -1,0 +1,108 @@
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    list-style: none;
+    text-decoration: none;
+}
+div {
+    display:block;
+}
+#circle-cursor {
+
+    background-color: transparent;
+    position: absolute;
+    z-index: 50;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+#circle-cursor h3{
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    color: rgb(118, 118, 118);
+    border: 1px solid rgb(118, 118, 118);
+    border-radius: 999px;
+}
+.preload {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    pointer-events: none;
+    z-index: 100;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+}
+.preload.active .left {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.preload.active .right {
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.preload .left{
+    position: absolute;
+    left:0;
+    top:0;
+    bottom: 0;
+    width:50%;
+    height: 100%;
+    background-color: #000;
+    -webkit-transition: -webkit-transform 0.5s 1s ease-in-out;
+    transition: -webkit-transform 0.5s 1s ease-in-out;
+    transition: transform 0.5s 1s ease-in-out;
+    transition: transform 0.5s 1s ease-in-out, -webkit-transform 0.5s 1s ease-in-out;
+}
+.preload .right {
+    position: absolute;
+    right:0;
+    top:0;
+    bottom: 0;
+    width:50%;
+    height: 100%;
+    background-color: #000;
+    -webkit-transition: -webkit-transform 0.5s 1s ease-in-out;
+    transition: -webkit-transform 0.5s 1s ease-in-out;
+    transition: transform 0.5s 1s ease-in-out;
+    transition: transform 0.5s 1s ease-in-out, -webkit-transform 0.5s 1s ease-in-out;
+}
+.preload .middle {
+    width: 3px;
+    height: 100%;
+    background-color: white;
+    -webkit-transform: scaleY(0.3);
+    -ms-transform: scaleY(0.3);
+    transform: scaleY(0.3);
+    -webkit-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+.preload.active .middle {
+    -webkit-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 0;
+}
