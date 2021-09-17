@@ -89,6 +89,7 @@ html {
     margin-left:60vh;
     margin-top: -60vh;
     
+    
 }
 .word {
     margin-left: -20vh;
@@ -253,7 +254,7 @@ section {
         margin-bottom: -10vh;
     }
     .pic {
-        display: none ;
+        display: none;
     }
     .navbar {
         display: none;
@@ -303,7 +304,7 @@ section {
         margin-bottom: -10vh;
     }
     .pic {
-        display: none ;
+        display:none;
     }
     .navbar {
         display: none;
@@ -396,14 +397,14 @@ section {
    }
    
 }
-@media only screen and (min-width:500px) and (max-width:720px)
+@media only screen and (min-width:500px) and (max-width:760px)
 {
     
     header{
         margin-bottom: -10vh;
     }
     .pic {
-        display: none ;
+        display: none;
     }
     .navbar {
         display: none;
@@ -452,7 +453,7 @@ section {
   
    
 }
-@media only screen and (min-width:720px) and (max-width:749px)
+@media only screen and (min-width:720px) and (max-width:999px)
 {
     
     header{
@@ -520,7 +521,7 @@ section {
   
    
 }
-@media only screen and (min-width:749px) and (max-width:769px)
+@media only screen and (min-width:735px) and (max-width:999px)
 {
     
     header{
@@ -529,7 +530,7 @@ section {
     }
 
    #kil {
-       display: none;
+       display:none;
        
    }
    .navbar{
@@ -588,7 +589,7 @@ section {
   
    
 }
-@media only screen and (min-width:769px) and (max-width:1050px)
+@media only screen and (min-width:1000px) and (max-width:1050px)
 {
     body{
         margin-left: 10vw;
@@ -604,6 +605,7 @@ section {
         width:20vw;
        
    }
+   
    .navbar {
        margin-left: 25%;
    }
