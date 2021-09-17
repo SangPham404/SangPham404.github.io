@@ -2,6 +2,15 @@ body {
     font-family: 'Lato', sans-serif;
     background: rgb(15, 15, 15);
 }
+#whatido .quotes{
+    width: 90vw;
+    padding:20px;
+    padding-left: 10vw;
+
+    
+
+    display: block;
+}
 
 
 header {
@@ -13,7 +22,7 @@ html {
   }
 #myNavbar {
     position:absolute;
-    left:50%;
+    left:45%;
     top:0;
     margin-left: -40vh;
 }
