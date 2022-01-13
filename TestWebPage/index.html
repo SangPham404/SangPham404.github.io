@@ -15,7 +15,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js"  defer></script>
     <!-- Title -->
    
 </head>
@@ -23,7 +23,7 @@
     <script src="./pageclip.js" charset="utf-8"></script>
     <link rel="stylesheet" href="./pageclip.css" media="screen">
     <h1> Đây là cái web test lamo</h1> 
-    <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS/form" onsubmit= "return false" class="pageclip-form" method="post">
+    <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS" onsubmit= "return false" class="pageclip-form" method="post">
         <fieldset id="fs-frm-inputs">
           <label for="email-address">Địa chỉ Email</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
@@ -89,12 +89,10 @@
          
           
             
-            <button class="btn" type="submit" class ="pageclip-form"data-btn>Submit</button>
-            <div class="checkmark-container">
-              <svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30">
-               <path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/>
-             </svg>
-            </div>
+            <button type="submit" class="btn pageclip-form" data-btn>
+                <span>submit</span>
+              </button>
+            
             
         
       </form>

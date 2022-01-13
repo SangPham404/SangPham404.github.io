@@ -4,9 +4,13 @@
     var e = "string" == typeof __pageclip_base ? __pageclip_base : "https://send.pageclip.co",
       m = {
         _base: e,
-        _successTemplate: '<div class="pageclip-form__success__message">Thank you!</div>',
+        _successTemplate: '<div class="checkmark-container"><svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30"><path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/> </svg></div>',
         cssBase: "pageclip-form",
         form: function(n, r) {
+            const btn = document.querySelector("[data-btn]")
+            btn.addEventListener("click", () => {
+            btn.classList.add("animating")
+            })
           if (r = r || {}, null == n) throw new Error("form() must be passed an HTMLFormElement or String, not null");
           if ("string" == typeof n && (n = document.querySelector(n)), !((n = d.jQuery && n instanceof d.jQuery ? n[0] : n) instanceof d.HTMLFormElement)) throw new Error("form() must be passed an HTMLFormElement or String");
           var t = f(n.getAttribute("action")),
