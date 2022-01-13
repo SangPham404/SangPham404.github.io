@@ -136,7 +136,7 @@
       }(n.animationDuration, t) : s()
     }
     p.prototype.start = function() {
-        document.querySelector("[data-btn]").classList.add("animating")    
+        document.querySelector("[data-btn]").classList.add("animating") ;   
       var e;
       this.el && (this.el.disabled = !0, (e = this.el.classList).remove(o), e.remove(r), e.add(n), i(this.el, function() {
         e.remove(n), e.add(r)
