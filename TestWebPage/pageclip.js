@@ -7,10 +7,7 @@
         _successTemplate: '<div class="checkmark-container"><svg x="0px" y="0px" fill="none" class="checkmark-svg" viewBox="0 0 25 30"><path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2"/> </svg></div>',
         cssBase: "pageclip-form",
         form: function(n, r) {
-            const btn = document.querySelector("[data-btn]")
-            btn.addEventListener("click", () => {
-            btn.classList.add("animating")
-            })
+       
           if (r = r || {}, null == n) throw new Error("form() must be passed an HTMLFormElement or String, not null");
           if ("string" == typeof n && (n = document.querySelector(n)), !((n = d.jQuery && n instanceof d.jQuery ? n[0] : n) instanceof d.HTMLFormElement)) throw new Error("form() must be passed an HTMLFormElement or String");
           var t = f(n.getAttribute("action")),
@@ -90,10 +87,7 @@
           t(e, !1)
         },
         _showSuccess: function(e, t) {
-            const btn = document.querySelector("[data-btn]")
-          btn.addEventListener("click", () => {
-          btn.classList.add("animating")
-          })
+        
           var s = document.createElement("div");
           s.classList.add(m.cssBase + "__success"), s.innerHTML = t, s.onclick = function() {
             m._hideSuccess(e)
@@ -126,6 +120,7 @@
   
     function p(e) {
       this.el = e.querySelector("." + m.cssBase + "__submit")
+      document.getElementsByClassName("btn")[0].classList.add("animating")
     }
     var e = "__submit--",
       n = m.cssBase + e + "start-loading",
