@@ -15,26 +15,18 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <!-- Title -->
-    <script type="text/javascript">
-        document
-            .getElementById("formwrap")
-            .addEventListener("submit", function(e) {
-       
-                window.location = "https://sangpham404.github.io/TestWebPage/";
-  });
-    
-    </script>
+   
 </head>
 <body>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
+    <script src="./pageclip.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./pageclip.css" media="screen">
     <h1> Đây là cái web test lamo</h1> 
-    <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS/form" class="pageclip-form" method="post">
+    <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS/form" onsubmit= "return false" class="pageclip-form" method="post">
         <fieldset id="fs-frm-inputs">
           <label for="email-address">Địa chỉ Email</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
           <label for="Student-ID">Mã số sinh viên</label>
-          <input type="text" name="StudentID" placeholder="Mã số sinh viên" required="">
+          <input type="text" name="StudentID" placeholder="Mã số sinh viên" required=""> 
           <fieldset class="choice">
             <legend>Lựa Chọn của bạn</legend>
            
@@ -96,9 +88,8 @@
           
             
             
-            <button type="submit" class="button pageclip-form">
-                <span> Vote </span>
-                
+            <button class="button pageclip-form__submit" type="submit">
+                <span>Submit</span>
               </button>
         
       </form>
