@@ -52,17 +52,7 @@ body {
     margin-left: -10px;
     margin-top: -10px;
     z-index: 2;
-    content: "";
-        display: none;
-        position: absolute;
-        background-color: #AAA;
-        left: 51%;
-        right: 51%;
-        top: 45%;
-        bottom: 45%;
-        border-radius: .25em;
-        animation: progress var(--progress-animation-time) var(--squish-animation-time);
-        animation-fill-mode: forwards;
+   
       }
   
   
