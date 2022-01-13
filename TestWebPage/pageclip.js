@@ -120,7 +120,7 @@
   
     function p(e) {
       this.el = e.querySelector("." + m.cssBase + "__submit")
-      document.getElementsByClassName("btn")[0].classList.add("animating")
+     
     }
     var e = "__submit--",
       n = m.cssBase + e + "start-loading",
@@ -136,6 +136,7 @@
       }(n.animationDuration, t) : s()
     }
     p.prototype.start = function() {
+        document.getElementById("thesubmitbutton").classList.add("animating")
       var e;
       this.el && (this.el.disabled = !0, (e = this.el.classList).remove(o), e.remove(r), e.add(n), i(this.el, function() {
         e.remove(n), e.add(r)
