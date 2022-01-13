@@ -16,13 +16,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <!-- Title -->
-    <script>
+    <script type="text/javascript">
         document
-        .getElementById("formwrap")
+            .getElementById("formwrap")
             .addEventListener("submit", function(e) {
-                e.preventDefault();
-                window.location.href = "https://sangpham404.github.io/TestWebPage/";
+       
+                window.location = "https://sangpham404.github.io/TestWebPage/";
   });
+    
     </script>
 </head>
 <body>
@@ -95,9 +96,10 @@
           
             
             
-            <input type="submit" class="button pageclip-form__submit">            
-               Nộp 
-              </input>
+            <button type="submit" class="button pageclip-form__submit">
+                <span>Gửi</span>
+                
+              </button>
         
       </form>
   
