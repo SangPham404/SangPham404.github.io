@@ -149,6 +149,7 @@
       }
       var t;
       this.el && (this.el.disabled = !1, (t = this.el.classList).remove(n), t.remove(r), t.add(o), i(this.el, e, e))
+      window.location.href = "https://sangpham404.github.io/TestWebPage/";
     };
     var c = null;
     "undefined" != typeof module && void 0 !== module.exports ? (module.exports = m, module.exports.normalizeAction = f) : (window.Pageclip = m, function() {
