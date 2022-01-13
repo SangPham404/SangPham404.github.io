@@ -23,7 +23,7 @@
 <body>
     
     <h1> Đây là cái web test caái submit</h1> 
-    <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS" onsubmit="document.querySelector('[data-btn]').classList.add('animating') ; return false ;" class="pageclip-form" method="post">
+    <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS" onsubmit="document.querySelector('[data-btn]').classList.add('animating') ; window.addEventListener('beforeunload', () => { debugger }, false);" class="pageclip-form" method="post">
         <fieldset id="fs-frm-inputs">
           <label for="email-address">Địa chỉ Email</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
