@@ -22,14 +22,15 @@
     <h1> Đây là cái web test lamo</h1> 
     <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS/form" class="pageclip-form" method="post">
         <fieldset id="fs-frm-inputs">
-          <label for="email-address">Email Address</label>
+          <label for="email-address">Địa chỉ Email</label>
           <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
-          <label for="street-address">Street Address</label>
+          <label for="Student-ID">Mã số sinh viên</label>
+          <input type="text" name="StudentID" placeholder="Mã số sinh viên" required="">
           <fieldset class="locale">
             <legend>Lựa Chọn của bạn</legend>
-            <input type="text" name="city" placeholder="City" required="">
+           
             <select name="state" required="">
-              <option value="" selected="" disabled="">State</option>
+              <option value="" selected="" disabled="">Chọn</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -82,9 +83,11 @@
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
             </select>
-            <input type="text" name="postal-code" placeholder="12345" required="">
          
-        <input type="submit" value="Register">
+         
+            <button type="submit" class="pageclip-form__submit">
+                <span>Gửi</span>
+              </button>
       </form>
   
 
