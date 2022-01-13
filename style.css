@@ -11,7 +11,25 @@ body {
 
     display: block;
 }
-
+#certificate .certi 
+{
+    height: 30%;
+    width: 30%;
+    padding-top: 15px;
+    padding: 2%;
+}
+#certificate .scroll-certi {
+    margin: 4px 4px;
+    margin-left: 5vw;
+    padding:4px;
+    background-color: #2f3030;
+    width: 90vw;
+    max-height: 600px;
+    height: 100%;
+    
+    overflow-y: scroll;
+    text-align:justify;
+}
 
 header {
     height:100vh;
@@ -22,7 +40,7 @@ html {
   }
 #myNavbar {
     position:absolute;
-    left:45%;
+    left:40%;
     top:0;
     margin-left: -40vh;
 }
