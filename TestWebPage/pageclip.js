@@ -90,10 +90,15 @@
           t(e, !1)
         },
         _showSuccess: function(e, t) {
+            const btn = document.querySelector("[data-btn]")
+          btn.addEventListener("click", () => {
+          btn.classList.add("animating")
+          })
           var s = document.createElement("div");
           s.classList.add(m.cssBase + "__success"), s.innerHTML = t, s.onclick = function() {
             m._hideSuccess(e)
           }, e.appendChild(s)
+          
         },
         _hideSuccess: function(e) {
           e = e.querySelector("." + m.cssBase + "__success");
