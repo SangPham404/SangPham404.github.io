@@ -1,0 +1,25 @@
+{
+  "person": [
+      {
+          "firstName": "Clark",
+          "lastName": "Kent",
+          "job": "Reporter",
+          "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/customer1.jpeg?raw=true",
+          "roll": 20
+      },
+      {
+          "firstName": "Bruce",
+          "lastName": "Wayne",
+          "job": "Playboy",
+          "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/customer2.jpeg?raw=true",
+          "roll": 30
+      },
+      {
+          "firstName": "Peter",
+          "lastName": "Parker",
+          "job": "Photographer",
+          "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/customer3.jpeg?raw=true",
+          "roll": 40
+      }
+  ]
+}

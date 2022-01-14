@@ -132,3 +132,54 @@ body {
           stroke-dashoffset: 0;
         }
       }
+      .zoom {
+    
+        
+        transition: transform .2s; /* Animation */
+        width: 10px;
+        height: 10px;
+        margin: 0 auto;
+      }
+      
+      .zoom:hover {
+        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+      .info-active 
+      {
+        margin-top: auto;
+        display: block;
+      }
+      .info-nonactive
+      {
+        display: none;
+      }
+      .profile-picture
+      {
+        text-align: left;
+      
+      }
+      .item 
+      {
+        vertical-align: top;
+        display: inline-block;
+        text-align: center;
+        width: 120px;
+        margin: 0 30px;
+      }
+      .profile 
+      {
+        display: block;
+      }
+      .caption
+      {
+        text-align: left;
+        display: block;
+      }
+      .static
+      {
+        margin-top: auto;
+      }
+      .dynamic
+      {
+        margin-top: 50px;
+      }

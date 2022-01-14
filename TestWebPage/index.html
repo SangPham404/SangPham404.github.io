@@ -18,10 +18,88 @@
     <script src="pageclip.js" charset="utf-8"></script>
     <link rel="stylesheet" href="pageclip.css" media="screen">
     <!-- Title -->
-   
+    <script src="script.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+    <script>
+    function searchFunction() {
+    // Declare variables
+    var input, filter, ul, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementsByClassName("zoom item");
+  
+  
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i <ul.length; i++) {
+      a = ul[i].getElementsByTagName('span')[0];
+     
+      txtValue = a.textContent || a.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        ul[i].style.display = "";
+      } else {
+        ul[i].style.display = "none";
+      }
+    }
+  }
+        $(function() {
+    
+    
+       var people = [];
+        let count=0;
+       $.getJSON('data.json', function(data) {
+           $.each(data.person, function(i, f) {
+
+              var display_image="<div class ='zoom item' id='people'> <img class='profile-picture'"+"id='image"+count.toString()+"'"+" src= '"+f.image+"' width=150 height=100>"
+              +"<span > "+f.firstName+" "+f.lastName+ "</span>"+ "<div class ='info-nonactive'id='info"+count.toString()+"'><ul class='info-display caption'> "+ "<li> <p>"  + f.job + "</li> </p>" +"<li> <p> " + f.roll + "</li> </p>" + " </ul></div> </div>"
+               $(display_image).appendTo("#userimg");
+
+               count=count+1;
+         });  
+    
+       });
+    
+    });
+
+    setInterval(
+    function() {
+    var people = [];
+     let count=0;
+    $.getJSON('data.json', function(data) {
+        $.each(data.person, function(i, f) {
+            
+               var check_hover="#image"+count.toString();
+               var Id_check="#info"+count.toString();
+               if($(check_hover).is(":hover") === true) 
+               {
+                  $(Id_check).removeClass("info-nonactive");
+                  $(Id_check).addClass("info-active");
+           
+               }
+               else{
+                $(Id_check).removeClass("info-active");
+                $(Id_check).addClass("info-nonactive");
+                 
+               }
+               count=count+1;
+      });  
+ 
+    });
+ 
+ });
+    </script>
 </head>
 <body>
+
+   <input type="text" id="myInput" onkeyup="searchFunction()" placeholder="Search for names..">
+      <div class="profile" >
+        <div id="userimg">
+      
+        </div>
+      </div>
     
+    
+    <!--
     <h1> Đây là cái web test submit nhưng k redirect</h1> 
     <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS/form" onsubmit="document.querySelector('[data-btn]').classList.add('animating') ; " class="pageclip-form" method="post">
         <fieldset id="fs-frm-inputs">
@@ -100,7 +178,7 @@
             
         
       </form>
-  
+  -->
 
 </body>
 <footer>
