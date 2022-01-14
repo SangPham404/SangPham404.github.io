@@ -59,6 +59,21 @@ html {
     padding:30px ;
     transition: all .7s;
 }
+.btn-cv
+{
+    margin-left: 150px;
+    background-color: #5cb85c;
+    border-radius: 5%;
+    color: antiquewhite;
+    border:none;
+   
+}
+.btn-cv:hover
+{
+    
+    background-color: #5cb85c;
+    color:#fff;
+}
 .menu-item
 {
     
@@ -243,7 +258,7 @@ section {
 .text-info {
     color: #6bddff!important;
 }
- #home h1,h2,h3 {
+ #home h1,h2,h3, button {
     animation-name: anim2;
     animation-duration: 2s;
 }
