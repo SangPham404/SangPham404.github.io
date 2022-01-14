@@ -61,7 +61,7 @@ html {
 }
 .btn-cv
 {
-    margin-left: 150px;
+    margin-left: 0px;
     background-color: #5cb85c;
     border-radius: 5%;
     color: antiquewhite;
@@ -258,7 +258,7 @@ section {
 .text-info {
     color: #6bddff!important;
 }
- #home h1,h2,h3, button {
+ #home h1,h2,h3  {
     animation-name: anim2;
     animation-duration: 2s;
 }
@@ -272,7 +272,7 @@ section {
     animation-name: anim3;
     animation-duration: 2s;
 }
-#home a button{
+#home button{
     border: 4px solid #eee;
     background-color: black;
     font-size: 25px;
@@ -282,7 +282,7 @@ section {
    animation-name: anim3;
    animation-duration: 3s;
 }
-#home a button:hover{
+#home button:hover{
     
     border: 4px solid #5cb85c;
     background-color: #5cb85c;
