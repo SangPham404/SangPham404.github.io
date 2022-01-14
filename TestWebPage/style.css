@@ -1,9 +1,9 @@
 body {
         background-color: white;
         min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: grid;
+        
+        align-items: left;
         margin: 0;
       }
       
@@ -134,20 +134,42 @@ body {
       }
       .zoom {
     
-        
+        display: block;
         transition: transform .2s; /* Animation */
-        width: 10px;
-        height: 10px;
-        margin: 0 auto;
+        width: 30px;
+        height: 30px;
+        margin: auto auto;
       }
       
       .zoom:hover {
-        transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+        
       }
       .info-active 
       {
-        margin-top: auto;
-        display: block;
+        /* position: absolute;
+
+        vertical-align:top;
+        margin-bottom: 100px;
+        display: block; */
+        z-index: 100;
+        position: absolute;
+        top: 0px;
+        left: 170px;
+        background-color: black;
+        color: white;
+        padding-left: 0px;
+        padding-right: 20px;
+        font-size:13px;
+        align-items: left;
+      }
+      .pic-active
+      {
+        z-index: -100;
+      }
+      .pic-nonactive
+      {
+        z-index: 100;
       }
       .info-nonactive
       {
@@ -160,15 +182,19 @@ body {
       }
       .item 
       {
+    
+        position: relative;
         vertical-align: top;
         display: inline-block;
         text-align: center;
         width: 120px;
-        margin: 0 30px;
+        height: 190px;
+        margin-inline-end: 100px;
+        background-size: cover;
       }
       .profile 
       {
-        display: block;
+        display: relative;
       }
       .caption
       {
@@ -183,3 +209,13 @@ body {
       {
         margin-top: 50px;
       }
+
+ #searchbar
+ {
+   display: block;
+ }     
+      .row {
+        margin: 10vh 10vw;
+        display: block;
+      }
+     

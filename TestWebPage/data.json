@@ -15,11 +15,74 @@
           "roll": 30
       },
       {
-          "firstName": "Peter",
-          "lastName": "Parker",
+          "firstName": "Ashkan",
+          "lastName": "Park",
           "job": "Photographer",
-          "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/customer3.jpeg?raw=true",
-          "roll": 40
-      }
+          "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/family.jpeg?raw=true",
+          "roll": 450
+      },
+      {
+        "firstName": "Ash",
+        "lastName": "KentKi",
+        "job": "Reporter",
+        "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/fashion.jpeg?raw=true",
+        "roll": 204
+    },
+    {
+        "firstName": "NoLal",
+        "lastName": "Wayne",
+        "job": "Playboy",
+        "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/camera.png?raw=true",
+        "roll": 301
+    },
+    {
+        "firstName": "PeA",
+        "lastName": "Parker",
+        "job": "Photographer",
+        "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/business.jpeg?raw=true",
+        "roll": 40
+    },
+    {
+      "firstName": "Clark",
+      "lastName": "Kent",
+      "job": "Reporter",
+      "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/customer1.jpeg?raw=true",
+      "roll": 20
+  },
+  {
+      "firstName": "Bruce",
+      "lastName": "Wayne",
+      "job": "Playboy",
+      "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/customer2.jpeg?raw=true",
+      "roll": 30
+  },
+  {
+      "firstName": "Ashkan",
+      "lastName": "Park",
+      "job": "Photographer",
+      "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/family.jpeg?raw=true",
+      "roll": 450
+  },
+  {
+    "firstName": "Ash",
+    "lastName": "KentKi",
+    "job": "Reporter",
+    "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/fashion.jpeg?raw=true",
+    "roll": 204
+},
+{
+    "firstName": "NoLal",
+    "lastName": "Wayne",
+    "job": "Playboy",
+    "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/camera.png?raw=true",
+    "roll": 301
+},
+{
+    "firstName": "PeA",
+    "lastName": "Parker",
+    "job": "Photographer",
+    "image":"https://github.com/sangphamitus/sangphamitus.github.io/blob/main/W3/images/business.jpeg?raw=true",
+    "roll": 40
+}
   ]
 }
