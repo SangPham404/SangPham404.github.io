@@ -109,7 +109,7 @@
 var countting=1;
 for (var page=1;page<numberOfPage+1;page++) 
 {
-
+  console.log("countting: "+countting.toString())
     if(page==thepage ||page==thepage+1 || page==thepage-1)
    {
      $('#thepage'+page.toString()).removeClass("pagebutton-hidden")
@@ -123,12 +123,10 @@ for (var page=1;page<numberOfPage+1;page++)
     
        if( document.getElementById('thepage'+page.toString())!=null)
         {
-          
+        
         document.getElementById('thepage'+page.toString()).addEventListener("click", function(event) {
-           
           thepage=countting;
-           
-          
+          event.preventDefault()
        });
     
      }
