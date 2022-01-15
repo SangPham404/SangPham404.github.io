@@ -106,7 +106,7 @@
            setInterval(function()
             {
               var numberOfPage=Math.floor(summarydata/ProfilePerPage);
-
+var countting=1;
 for (var page=1;page<numberOfPage+1;page++) 
 {
 
@@ -125,7 +125,8 @@ for (var page=1;page<numberOfPage+1;page++)
         {
           
         document.getElementById('thepage'+page.toString()).addEventListener("click", function(event) {
-           console.log($('#thepage'+page.toString()).text)
+           
+          thepage=countting;
            
           
        });
@@ -139,6 +140,7 @@ for (var page=1;page<numberOfPage+1;page++)
      $('#thepage'+page.toString()).removeClass("pagebutton-show")
      $('#thepage'+page.toString()).removeClass("active");
    }
+   countting=countting+1;
 
 }
 for (var itemshow=0;itemshow<summarydata;itemshow++) 
