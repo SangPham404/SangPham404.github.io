@@ -137,7 +137,7 @@ body {
         display: block;
         transition: transform .2s; /* Animation */
         width: 30px;
-        height: 30px;
+        height: 10px;
         margin: auto auto;
       }
       
@@ -152,11 +152,12 @@ body {
         vertical-align:top;
         margin-bottom: 100px;
         display: block; */
-        z-index: 100;
+      
         position: absolute;
-        top: 0px;
-        left: 170px;
-        background-color: black;
+        
+        height: 300px;
+        width: 300px;
+        background-color: rgba(0,0,0,0.8);
         color: white;
         padding-left: 0px;
         padding-right: 20px;
@@ -165,7 +166,7 @@ body {
       }
       .pic-active
       {
-        z-index: -100;
+       z-index: 0;
       }
       .pic-nonactive
       {
@@ -218,4 +219,40 @@ body {
         margin: 10vh 10vw;
         display: block;
       }
-     
+      .dark-footer
+      {
+        height: 30px;
+        background-color: #71DFBE;
+      }
+     /* Pagination links */
+.pagination{
+  align-items: center;
+}
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+.pagebutton-show
+{
+  display: block;
+}
+.pagebutton-hidden
+{
+  display: none;
+}
+/* Add a grey background color on mouse-over */
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+.hide-item
+{
+  display: none;
+}

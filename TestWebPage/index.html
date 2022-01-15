@@ -22,6 +22,9 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
 
     <script>
+    let summarydata=0
+    let ProfilePerPage=5;
+    
     function searchFunction() {
     // Declare variables
     var input, filter, ul, a, i, txtValue;
@@ -50,40 +53,151 @@
        $.getJSON('data.json', function(data) {
            $.each(data.person, function(i, f) {
 
-              var display_image="<div class ='zoom item col ' id='people'> <img class='profile-picture pic-nonactive'"+"id='image"+count.toString()+"'"+" src= '"+f.image+"' width=150 height=100>"
-              +"<span> "+f.firstName+" "+f.lastName+ "</span>"+ "<div class ='info-nonactive'id='info"+count.toString()+"'><ul class='info-display caption'> "+ "<li> <p>"  + f.job + "</li> </p>" +"<li> <p> " + f.roll + "</li> </p>" + " </ul></div> </div>"
+              var display_image="<div class ='zoom item col ' id='people"+count.toString()+"'> <img class='profile-picture pic-nonactive'"+"id='image"+count.toString()+"'"+" src= '"+f.image+"' width=150 height=100>"
+              +"<span> "+f.firstName+" "+f.lastName+ "</span> </div> "
+              var display_info= "<div class ='info-nonactive'id='info"+count.toString()+"'><ul class='info-display caption'> "+"<li><p>"+f.firstName+" "+f.lastName+"</p></li>"+ "<li> <p>"  + f.job + "</li> </p>" +"<li> <p> " + f.roll + "</li> </p>" + " </ul></div>"
                $(display_image).appendTo("#userimg");
-
+                $(display_info).appendTo("#user-info-display")
                count=count+1;
+               summarydata=summarydata+1;
+               
          });  
     
        });
-    
+       
     });
+    
+   
+    window.onload=function()
+    {
+      $.getJSON('data.json', function(data) {
+           $.each(data.person, function(i, f) {
+               summarydata=summarydata+1;
+               
+         });  
+    
+       });
+       var numberOfPage=Math.floor(summarydata/ProfilePerPage);
+        var pageline=" <a id='pagepinleft' href='#' >&laquo;</a>"
+        for(var page=0;page<=numberOfPage;page++)
+        {
+            pageline=pageline+" <a "+ "id='thepage"+(page+1).toString()+"' class='pagebutton-hidden' href='#'>"+(page+1).toString()+"</a>"
+        }
+        pageline=pageline+"<a id='pagepinright' href='#' >&raquo;</a>"
+        $(pageline).appendTo("#pagechange")
+    };
+    let thepage=2;
+    
+            // document.getElementById('pagepinright').addEventListener("click", function(event) {
+            //     if(thepage+1<numberOfPage)
+            //     {
+            //       thepage=thepage+1;
+            //     }
+            //     event.preventDefault();
+            // });
+            // document.getElementById('pagepinleft').addEventListener("click", function(event) {
+            //     if(thepage-1>0)
+            //     {
+            //       thepage=thepage-1;
+            //     }
+            //     event.preventDefault();
+            // });
+          
+           setInterval(function()
+            {
+              var numberOfPage=Math.floor(summarydata/ProfilePerPage);
 
+for (var page=1;page<numberOfPage+1;page++) 
+{
+
+    if(page==thepage ||page==thepage+1 || page==thepage-1)
+   {
+     $('#thepage'+page.toString()).removeClass("pagebutton-hidden")
+     $('#thepage'+page.toString()).addClass("pagebutton-show")
+     if(page == thepage)
+     {
+       $('#thepage'+page.toString()).addClass("active");
+     }
+     else{
+       
+    
+       if( document.getElementById('thepage'+page.toString())!=null)
+        {
+          
+        document.getElementById('thepage'+page.toString()).addEventListener("click", function(event) {
+           console.log($('#thepage'+page.toString()).text)
+           
+          
+       });
+    
+     }
+       $('#thepage'+page.toString()).removeClass("active");
+     }
+   }
+   else{
+     $('#thepage'+page.toString()).addClass("pagebutton-hidden")
+     $('#thepage'+page.toString()).removeClass("pagebutton-show")
+     $('#thepage'+page.toString()).removeClass("active");
+   }
+
+}
+for (var itemshow=0;itemshow<summarydata;itemshow++) 
+{
+   if(itemshow>=(thepage-1)*ProfilePerPage && itemshow<thepage*ProfilePerPage)
+   {
+     $('#people'+itemshow.toString()).removeClass("hide-item");
+   }
+   else{
+     $('#people'+itemshow.toString()).addClass("hide-item");
+   }
+
+}
+
+            }
+            ,200)
+      
     setInterval(
     function() {
+      
+   
     var people = [];
      let count=0;
+   
+    
     $.getJSON('data.json', function(data) {
         $.each(data.person, function(i, f) {
               
-              var noas=count+1;
-                var ajust_hover="#image"+noas.toString();
+           
                var check_hover="#image"+count.toString();
                var Id_check="#info"+count.toString();
                if($(check_hover).is(":hover") === true) 
                {
-                  $(Id_check).removeClass("info-nonactive");
+                $(Id_check).removeClass("info-nonactive");
                   $(Id_check).addClass("info-active");
-                  $(ajust_hover).removeClass("pic-nonactive");
-                  $(ajust_hover).addClass("pic-active");
+                  var elementID=document.getElementById("image"+count.toString())
+                
+                  if(elementID!=null)
+                 {
+                  let width = screen.width;
+                  var bodyRect = document.body.getBoundingClientRect()
+                    var picpositionLeft=elementID.getBoundingClientRect().left - bodyRect.left
+                    var picpositionTop=elementID.getBoundingClientRect().top - bodyRect.top
+                    var picpositionRight=elementID.getBoundingClientRect().right - bodyRect.right
+                   
+                    if(picpositionLeft+200+300<width)
+                    {
+                  document.getElementById("info"+count.toString()).style.left=picpositionLeft+200+"px";
+                    }
+                    else{
+                      document.getElementById("info"+count.toString()).style.left=picpositionLeft-310+"px";
+                    }
+                  document.getElementById("info"+count.toString()).style.top=picpositionTop+'px';
+                 }
                }
                else{
                 $(Id_check).removeClass("info-active");
                 $(Id_check).addClass("info-nonactive");
-                $(ajust_hover).removeClass("pic-active");
-                  $(ajust_hover).addClass("pic-nonactive");
+            
                  
                }
         
@@ -92,7 +206,7 @@
  
     });
  
- });
+ },200);
      
     </script>
 </head>
@@ -113,6 +227,12 @@
       
     </div>
   </div>
+  <div class="container-fluid" >
+    <div id="user-info-display" >
+  
+    </div>
+  
+</div>
     <!--
     <h1> Đây là cái web test submit nhưng k redirect</h1> 
     <form action="https://send.pageclip.co/flitMoFPczR7e8GBlaXvIxvTNaMQjuMS/form" onsubmit="document.querySelector('[data-btn]').classList.add('animating') ; " class="pageclip-form" method="post">
@@ -193,9 +313,19 @@
         
       </form>
   -->
-
+  
+  <div id="pagechange"   class="pagination row">
+   
+    
+  </div>
+  
+       
+  
 </body>
 <footer>
+  <div class="dark-footer">
+
+  </div>
 </footer>
 
 </html>
