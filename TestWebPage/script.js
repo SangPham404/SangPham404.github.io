@@ -25,26 +25,7 @@ $(document).ready(function() {
        
     });
     
-    function searchFunction() {
-    // Declare variables
-    var input, filter, ul, a, i, txtValue;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementsByClassName("zoom item");
-  
-  
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i <ul.length; i++) {
-      a = ul[i].getElementsByTagName('span')[0];
-     
-      txtValue = a.textContent || a.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        ul[i].style.display = "";
-      } else {
-        ul[i].style.display = "none";
-      }
-    }
-  }
+   
         $(function() {
     
     
@@ -85,76 +66,7 @@ $(document).ready(function() {
                
          })})});
    
-   
-            // document.getElementById('pagepinright').addEventListener("click", function(event) {
-            //     if(thepage+1<numberOfPage)
-            //     {
-            //       thepage=thepage+1;
-            //     }
-            //     event.preventDefault();
-            // });
-            // document.getElementById('pagepinleft').addEventListener("click", function(event) {
-            //     if(thepage-1>0)
-            //     {
-            //       thepage=thepage-1;
-            //     }
-            //     event.preventDefault();
-            // });
-          
-//            setInterval(function()
-//             {
-//               var numberOfPage=Math.floor(summarydata/ProfilePerPage);
-// var countting=1;
-// console.log("thepage: "+thepage.toString())
-// for (var page=1;page<numberOfPage+1;page++) 
-// {
- 
-//     if(page==thepage ||page==thepage+1 || page==thepage-1)
-//    {
-//      $('#thepage'+page.toString()).removeClass("pagebutton-hidden")
-//      $('#thepage'+page.toString()).addClass("pagebutton-show")
-//      if(page == thepage)
-//      {
-//        $('#thepage'+page.toString()).addClass("active");
-//      }
-//      else{
-       
-    
-//        if( document.getElementById('thepage'+page.toString())!=null)
-//         {
-        
-//         document.getElementById('thepage'+page.toString()).addEventListener("click", function(event) {
-//           thepage=countting -thepage
-//           event.preventDefault()
-//        });
-    
-//      }
-//        $('#thepage'+page.toString()).removeClass("active");
-//      }
-//    }
-//    else{
-//      $('#thepage'+page.toString()).addClass("pagebutton-hidden")
-//      $('#thepage'+page.toString()).removeClass("pagebutton-show")
-//      $('#thepage'+page.toString()).removeClass("active");
-//    }
-//    countting=countting+1;
-
-// }
-// for (var itemshow=0;itemshow<summarydata;itemshow++) 
-// {
-//    if(itemshow>=(thepage-1)*ProfilePerPage && itemshow<thepage*ProfilePerPage)
-//    {
-//      $('#people'+itemshow.toString()).removeClass("hide-item");
-//    }
-//    else{
-//      $('#people'+itemshow.toString()).addClass("hide-item");
-//    }
-
-// }
-
-//             }
-//             ,1000)
-      
+  
     setInterval(
     function() {
       
@@ -266,6 +178,8 @@ $(document).ready(function() {
    
     }
   });
+
+  
  }
    
   });
