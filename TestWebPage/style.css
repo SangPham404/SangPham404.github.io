@@ -166,12 +166,13 @@ body {
       }
       .pic-active
       {
-       z-index: 0;
+       display: block;
       }
       .pic-nonactive
       {
-        z-index: 100;
+        display: none;
       }
+      
       .info-nonactive
       {
         display: none;
@@ -255,4 +256,12 @@ body {
 .hide-item
 {
   display: none;
+}
+
+.page-inactive 
+{
+  display: none;
+}
+.page-active{
+  display: block;
 }
