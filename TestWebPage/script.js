@@ -203,7 +203,7 @@ $(document).ready(function() {
       $(this).removeClass('active').next().addClass('active');
      
     
-      $(target).fadeIn(600);
+     
     }
   });
 
