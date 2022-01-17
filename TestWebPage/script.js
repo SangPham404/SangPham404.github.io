@@ -154,7 +154,7 @@ $(document).ready(function() {
         
   pageItem.click(function() {
     
-    // pageItem.removeClass("active");
+    pageItem.removeClass("active");
     // pageItem.removeClass("pagebutton-show")
     // pageItem.addClass("pagebutton-hidden")
     $(this).not("#prev, #next").addClass("active");
