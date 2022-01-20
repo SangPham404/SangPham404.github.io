@@ -11,7 +11,7 @@ $(document).ready(function() {
            $.each(data.person, function(i, f) {
             if(Math.floor(i/ProfilePerPage+1)===(i/ProfilePerPage)+1)
             {
-              pageline=" <a "+ "id='thepage"+Math.floor(i/ProfilePerPage+1).toString()+"' class='pagebutton-show' href='#pagenum"+Math.floor(i/ProfilePerPage+1).toString()+"'>"+Math.floor(i/ProfilePerPage+1).toString()+"</a>"
+              pageline=" <a "+ "id='thepage"+Math.floor(i/ProfilePerPage+1).toString()+"' class='pagebutton-hidden' href='#pagenum"+Math.floor(i/ProfilePerPage+1).toString()+"'>"+Math.floor(i/ProfilePerPage+1).toString()+"</a>"
               $(pageline).appendTo("#pagechange")   
               $('#thepage'+thepage.toString()).addClass("active");  
             }
@@ -146,34 +146,42 @@ $(document).ready(function() {
  window.onload=function()
  {
    
-// $('div #thepage1').removeClass('pagebutton-hidden');
-// $('div #thepage1').addClass('pagebutton-show');
-// $('div #thepage2').removeClass('pagebutton-hidden');
-// $('div #thepage2').addClass('pagebutton-show');
+$('div #thepage1').removeClass('pagebutton-hidden');
+$('div #thepage1').addClass('pagebutton-show');
+$('div #thepage2').removeClass('pagebutton-hidden');
+$('div #thepage2').addClass('pagebutton-show');
+$('div #thepage3').removeClass('pagebutton-hidden');
+$('div #thepage3').addClass('pagebutton-show');
  var pageItem = $(".pagination a").not("#prev, #next");
         
+  $('#mainbanner button').click(function() {$('#mainbanner').css('display','none')})
   pageItem.click(function() {
     
     pageItem.removeClass("active");
-    // pageItem.removeClass("pagebutton-show")
-    // pageItem.addClass("pagebutton-hidden")
+
+    pageItem.removeClass("pagebutton-show")
+    pageItem.addClass("pagebutton-hidden")
+
     $(this).not("#prev, #next").addClass("active");
 
     target = $(this).attr('href');
     var numberpage=Math.floor(target.split('m')[1])
-    console.log(numberpage)
+    
     $('div '+target).removeClass('page-inactive');
     $('div '+target).addClass('page-active');
-    // $('div #thepage'+(numberpage).toString()).removeClass('pagebutton-hidden');
-    // $('div #thepage'+(numberpage).toString()).addClass('pagebutton-show');
-    // $('div #thepage'+(numberpage+1).toString()).removeClass('pagebutton-hidden');
-    // $('div #thepage'+(numberpage+1).toString()).addClass('pagebutton-show');
-    // $('div #thepage'+(numberpage-1).toString()).removeClass('pagebutton-hidden');
-    // $('div #thepage'+(numberpage-1).toString()).addClass('pagebutton-show');
-    // $('div #thepage'+(numberpage+2).toString()).removeClass('pagebutton-hidden');
-    // $('div #thepage'+(numberpage+2).toString()).addClass('pagebutton-show');
-    // $('div #thepage'+(numberpage-2).toString()).removeClass('pagebutton-hidden');
-    // $('div #thepage'+(numberpage-2).toString()).addClass('pagebutton-show');
+
+    $('div #thepage'+(numberpage).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage+1).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage+1).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage-1).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage-1).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage+2).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage+2).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage-2).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage-2).toString()).addClass('pagebutton-show');
+
+
     $('#userimg > div:not('+target+')').removeClass('page-active');
     $('#userimg > div:not('+target+')').addClass('page-inactive');
     $(target).fadeIn(600);
@@ -183,9 +191,7 @@ $(document).ready(function() {
     var bar= $('a.active')
     bar.removeClass('active')
     var car=bar.prev()
-    
     console.log(laf)
-    
     car.addClass('active');
     var laf =$('a.active').attr('href')
     if(laf!='#prev')
@@ -200,11 +206,25 @@ $(document).ready(function() {
     if ($(this).hasClass("active"))
     {
      
-      $(this).removeClass('active').next().addClass('active');
-     
-    
+      $(this).removeClass('active').next().addClass('active');  
      
     }
+    var getpage=document.getElementsByClassName('pagination')[0].getElementsByClassName('active')[0].innerHTML;
+   
+    pageItem.removeClass("pagebutton-show")
+    pageItem.addClass("pagebutton-hidden")
+    var numberpage=Math.floor(getpage);
+    $('div #thepage'+(numberpage).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage+1).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage+1).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage-1).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage-1).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage+2).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage+2).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage-2).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage-2).toString()).addClass('pagebutton-show');
+    console.log(numberpage)
   });
 
   $("#next").click(function() {
@@ -225,6 +245,22 @@ $(document).ready(function() {
      
    
     }
+    var getpage=document.getElementsByClassName('pagination')[0].getElementsByClassName('active')[0].innerHTML;
+   
+    pageItem.removeClass("pagebutton-show")
+    pageItem.addClass("pagebutton-hidden")
+    var numberpage=Math.floor(getpage);
+    $('div #thepage'+(numberpage).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage+1).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage+1).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage-1).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage-1).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage+2).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage+2).toString()).addClass('pagebutton-show');
+    $('div #thepage'+(numberpage-2).toString()).removeClass('pagebutton-hidden');
+    $('div #thepage'+(numberpage-2).toString()).addClass('pagebutton-show');
+    console.log(numberpage)
   });
 
   

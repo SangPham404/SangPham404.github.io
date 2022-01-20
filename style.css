@@ -2,6 +2,66 @@ body {
     font-family: 'Lato', sans-serif;
     background: rgb(15, 15, 15);
 }
+.theline 
+{
+border-right: 6px solid green;
+  height: 2600px;
+  position: absolute;
+    right:50%;
+  
+}
+.ver-line 
+{
+border-bottom: 6px solid green;
+    width: 150px;
+  position: absolute;
+    right:50%;
+  
+}
+#portfolios #card-odd-top
+{
+    
+    margin-right: -200px;
+    margin-left:67%;
+
+    
+}
+#portfolios #card-odd
+{
+    
+    margin-right: -200px;
+    margin-left:67%;
+
+ margin-top: -200px;
+    
+}
+#portfolios #card-even
+{
+    
+   margin-top: -200px;
+   margin-left: -20px;
+   margin-right:50%;
+    
+}
+.cd-timeline
+{
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+.cd-timeline-block
+{
+  position: relative;
+    margin: 2em 0;
+}
+.cd-timeline-content 
+{
+  position: relative;
+  margin-left: 60px;
+  background-color: #eee;
+  border-radius: 0.50em;
+}
 #whatido .quotes{
     width: 90vw;
     padding:20px;
