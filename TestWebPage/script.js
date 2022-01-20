@@ -1,8 +1,15 @@
+window.addEventListener("load", function () {
+  $("#loading").fadeOut(800);
+ 
+});
+
 $(document).ready(function() {
     let summarydata=0
     let ProfilePerPage=2;
     let thepage=1;
-   
+    let widthScreen = screen.width;
+    let heightScreen=screen.height;
+    console.log(widthScreen+" x "+heightScreen)
     $(function()
     {
       var pageline=" <a id='prev' href='#prev' >&laquo;</a>"
@@ -66,6 +73,8 @@ $(document).ready(function() {
                
          })})});
    
+         if(widthScreen>=760)
+         { 
          $(document).mouseover(function(e){
            $('[id^="info"]').addClass('info-nonactive').removeClass('info-active')
         // i just retrieved the id for a demo
@@ -87,7 +96,7 @@ $(document).ready(function() {
                     var picpositionLeft=elementID.getBoundingClientRect().left - bodyRect.left
                     var picpositionTop=elementID.getBoundingClientRect().top - bodyRect.top
                     var picpositionRight=elementID.getBoundingClientRect().right - bodyRect.right
-                   
+                  
                     if(picpositionLeft+200+300<width)
                     {
                   document.getElementById("info"+theNumber.toString()).style.left=picpositionLeft+200+"px";
@@ -96,10 +105,65 @@ $(document).ready(function() {
                       document.getElementById("info"+theNumber.toString()).style.left=picpositionLeft-310+"px";
                     }
                   document.getElementById("info"+theNumber.toString()).style.top=picpositionTop+'px';
-                 }
+                
+                
+                  
+        
+               
+                }
+                
           }
         }
         });
+      }  
+else{
+        
+        $(document).mouseover(function(e){
+          console.log('clicked')
+          $('[id^="info"]').addClass('info-nonactive').removeClass('info-active')
+       // i just retrieved the id for a demo
+         var TheLine=$(e.target).attr('id')
+         if(TheLine!=undefined)
+         {
+           TheLine=TheLine.toString();
+         if(TheLine!=undefined &&TheLine.indexOf('image')!=-1)
+         {
+           var theNumber=TheLine.split('e')[1];
+           var theIDNum="#info"+theNumber;
+           $(theIDNum).removeClass("info-nonactive");
+           $(theIDNum).addClass("info-active");
+           var elementID=document.getElementById("image"+theNumber)
+                 if(elementID!=null)
+                {
+                 let width = screen.width;
+                 var bodyRect = document.body.getBoundingClientRect()
+                   var picpositionLeft=elementID.getBoundingClientRect().left - bodyRect.left
+                   var picpositionTop=elementID.getBoundingClientRect().top - bodyRect.top
+                   var picpositionRight=elementID.getBoundingClientRect().right - bodyRect.right
+                      
+                   console.log(picpositionLeft)
+                   console.log(width)
+                   if(picpositionLeft<width)
+                   {
+                     console.log("display info")
+                 document.getElementById("info"+theNumber.toString()).style.left=picpositionLeft+160+"px";
+                   }
+                   else{
+                     document.getElementById("info"+theNumber.toString()).style.left=picpositionLeft+160+"px";
+                   }
+                 document.getElementById("info"+theNumber.toString()).style.top=picpositionTop+'px';
+                
+                }
+                
+                  
+                 
+                 
+               }
+               
+         }
+       
+       });
+      }
 //     setInterval(
 //     function() {   
 //     $.getJSON('data.json', function(data) {
