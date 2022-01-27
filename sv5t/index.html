@@ -27,19 +27,56 @@
 <body>
     <nav id='navbar'>
         <div id='logo-display'>
-        <img src="logo.png" alt="logo" id="logo" width="60px" height="60px"> 
-        <p>Test Web Page</p>
-    </div>
+            <img src="logo.png" alt="logo" id="logo" width="60px" height="60px">
+            <p>Test Web Page</p>
+        </div>
     </nav>
 
     <div id="count-down-clock">
         00:00:00
     </div>
     <div class="web-head">
-        <div id="search">
-            <label for="searchname">Search</label>
+       
+        <div id="filter">
 
-            <input type="text" id="searchname" placeholder="Search">
+                <button onclick="SearchDisplayStyle()">Mục tìm kiếm</button>
+                <div id="the-fields" class="hidden">
+                <label for="name-filter">Tên:</label>
+                <input type="text" name="name-filter" id="name-filter" placeholder="Họ tên">
+                <br>
+                <label for="class-filter">Lớp:</label>
+                <input type="text" name="class-filter" id="class-filter" placeholder="Mã số lớp">
+              <br>
+                <label for="year-filter">Khóa:</label>
+                    <select name="year-filter" id="year-filter">
+                    <option value="all">--Tất cả--</option>
+                    <option value="44">K44</option> 
+                    <option value="45">K45</option>
+                    <option value="46">K46</option>
+                </select>
+                <br>
+                <label for="faculty-filter">Khoa:</label>
+                    <select name="faculty-filter" id="faculty-filter">
+                    <option value="all">--Tất cả--</option>
+                    <option value="Công nghệ thông tin kinh doanh">Công nghệ thông tin kinh doanh</option> 
+                    <option value="Du lịch">Du lịch</option>
+                    <option value="Kế toán">Kế toán</option>
+                    <option value="Kinh doanh Quốc tế - Marketing">Kinh doanh Quốc tế - Marketing</option>
+                    <option value="Kinh tế">Kinh tế</option>
+                    <option value="KTX 43-45 NCT">KTX 43-45 NCT</option>
+                    <option value="Luật">Luật</option>
+                    <option value="Lý luận chính trị">Lý luận chính trị</option>
+                    <option value="Ngân hàng">Ngân hàng</option>
+                    <option value="Ngoại ngữ">Ngoại ngữ</option>
+                    <option value="Quản trị">Quản trị</option>
+                    <option value="Tài chính">Tài chính</option>
+                    <option value="Quản lý Nhà nước">Quản lý Nhà nước</option>
+                    <option value="Tài chính công">Tài chính công</option>
+                    <option value="Toán - Thống kê">Toán - Thống kê</option>
+                </select>
+                <br/>
+                <button onclick="InfoFind()">Tìm kiếm</button>
+            </div>
         </div>
     </div>
     <div id="page-slide">
@@ -49,8 +86,14 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
+    <div class="voting">
+        <button>
+            <a href="#">Go Voting</a>
+        </button>
+    </div>
+
 </body>
-<footer>    
+<footer>
     <div id="footer-display">
         <p>Example Web Page</p>
     </div>

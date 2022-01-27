@@ -3,6 +3,22 @@ let slideIndex = 1;
 function plusSlides(n) {
     showSlides(slideIndex += n);
 }
+function SearchDisplayStyle()
+{
+    if($("#the-fields").hasClass("hidden"))
+    {
+        $("#the-fields").removeClass("hidden");
+        $("a.next").css("top","85%");
+        $("a.prev").css("top","85%");
+    }
+    else
+    {
+        $("#the-fields").addClass("hidden");
+        $("a.next").css("top","50%");
+        $("a.prev").css("top","50%");
+    }
+  
+};
 function showSlides(n) {
         var i;
         var slides = document.getElementsByClassName("contestant-item");
@@ -27,7 +43,8 @@ function showSlides(n) {
         //dots[slideIndex - 1].className += " active";
     }
 
- 
+    
+   
     function listContestant(info) {
         $('#info-page').loadTemplate('contestant.html', info,{ complete: function()
         {
@@ -45,6 +62,79 @@ function showSlides(n) {
         listContestant(displayData)
         
     });
+    function InfoFind()
+    {
+
+        var selectName = document.querySelector('#name-filter').value;
+        var selectClass = document.querySelector('#class-filter').value;
+        var selectYear = document.querySelector('#year-filter').value;
+        var selectFaculty = document.querySelector('#faculty-filter').value;
+        var info=[selectName,selectClass,selectYear,selectFaculty];
+        console.log(info);
+        var displaySearchData= _.filter(searchData,function(item)
+        {
+            if(selectName!="")
+            {
+            return (
+                item.name.toLowerCase().match(selectName.toLowerCase())
+                )
+            }
+            else
+            {
+                return (
+                  item
+                    )
+            }
+        });
+   
+        displaySearchData= _.filter(displaySearchData,function(item)
+        {
+            if(selectClass!="")
+            {
+            return (
+                item.class.toLowerCase().match(selectClass.toLowerCase())
+                )
+            }
+            else
+            {
+                return (item )
+            }
+        });
+
+        displaySearchData= _.filter(displaySearchData,function(item)
+        {
+            if(selectFaculty!="all")
+            {
+            return (
+                item.faculty.toLowerCase().match(selectFaculty.toLowerCase())
+                )
+            }
+            else
+            {
+                return (
+                  item
+                    )
+            }
+        });
+
+        displaySearchData= _.filter(displaySearchData,function(item)
+        {
+            if(selectYear!="all")
+            {
+            return (
+                String(item.year).toLowerCase().match(selectYear.toLowerCase())
+                )
+            }
+            else
+            {
+                return (
+                  item
+                    )
+            }
+        });
+        console.log(displaySearchData);
+        listContestant(displaySearchData);
+    }
 $(function () {
 
       // Next/previous controls
@@ -74,26 +164,8 @@ $(function () {
                 document.getElementById("count-down-clock").innerHTML = "EXPIRED";
             }
         }, 1000);     
-        $('#searchname').keyup(function()
-        {
-          var searchText =$(this).val();
-      
-          displaySearchData = _.filter(searchData,function(item)
-          {
-            return (
-              item.name.toLowerCase().match(searchText.toLowerCase())||
-             String(item.year).toLowerCase().match(searchText.toLowerCase()) ||
-             item.faculty.toLowerCase().match(searchText.toLowerCase()) 
-              )
-      
-          });
-          
-          listContestant(displaySearchData);
-        });
+       
       
     });
-    
-    
- 
-   
+
 });
