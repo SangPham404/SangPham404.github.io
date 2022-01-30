@@ -310,7 +310,7 @@ overflow-y: scroll;
 }
 #contact .contact-form 
 {
-  margin-top: 20%;
+  margin-top: 15%;
   display: block;
   text-align: left;
   margin-left: 30%;
@@ -326,9 +326,22 @@ fieldset{
   width: max-content;
   padding:10px 10px;
   border: 2px solid #52616B;
+  width: 50%;
 }
 
+  form {
+    
+    overflow: hidden;
+  }
 
+fieldset label {
+  float: left;
+  clear: both;
+}
+fieldset input ,fieldset textarea {
+  float: right;
+  clear: both;
+}
 #submitbtn 
 {
   background-color: #C9D6DF;
