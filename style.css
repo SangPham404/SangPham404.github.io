@@ -336,11 +336,12 @@ fieldset{
 
 fieldset label {
   float: left;
-  clear: both;
+  clear: right;
 }
 fieldset input ,fieldset textarea {
   float: right;
   clear: both;
+  width: 90%;
 }
 #submitbtn 
 {
