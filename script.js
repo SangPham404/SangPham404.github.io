@@ -1,74 +1,32 @@
-$(document).ready(function(){
- 
-    $(window).scroll(function() {
-        let position = $(this).scrollTop();
-        if (position >= 200) {
-            $('.nav-menu').addClass('custom-navbar');
-        } else {
-            $('.nav-menu').removeClass('custom-navbar');
-        }
+function PageClick() {
+    $('#about').css('display', 'none');
+    $('#portfolios').css('display', 'none');
+    $('#contact').css('display', 'none');
+    $('#navbar li').on('click', function () {
+        $('#navbar li').removeClass('active')
+        $(this).addClass('active')
+        let page = $(this)[0].getAttribute('value').split('-')[0];
+        $('#home').css('display', 'none');
+        $('#about').css('display', 'none');
+        $('#portfolios').css('display', 'none');
+        $('#contact').css('display', 'none');
+        $('#' + page).css('display', 'block');
     });
-    $(window).scroll(function() {
-        let position = $(this).scrollTop();
-        if (position >= 200) {
-            $('.nav-menu').addClass('custom-navbar');
-           
-        } else {
-            $('.nav-menu').removeClass('custom-navbar');
-            
-            
-        }
-        if(position>=800)
-        {
-            $("#portfolios .card").addClass('changaeing');
-        }
-        else{
-            $("#portfolios .card").removeClass('changaeing');
-        }
-        if(position>=1400) {
-            $("#about .card").addClass('changaeing');
-        }
-        else{
-            $("#about .card").removeClass('changaeing');
-        }
-        
-    });
-    
-    
-});
-var sections = $('section');
-var nav = $('nav');
-var nav_height = nav.outerHeight();
 
-$(window).on('scroll', function () {
-    var cur_pos = $(this).scrollTop();
+}
+function LearnMoreInfo()
+{
+    $('#learn-more').removeClass('hidden');
+}
+function CloseInfo()
+{
+    $('#learn-more').addClass('hidden');
+}
+$(document).ready(function () {
 
-    sections.each(function () {
-        var top = $(this).offset().top - nav_height;
-        var bottom = top + $(this).outerHeight();
 
-        if (cur_pos >= top && cur_pos <= bottom) {
-            nav.find('a').removeClass('active');
-            sections.removeClass('active');}
-        else{
-            $(this).addClass('active');
-            nav.find('a[href="#' + $(this).attr('id') + '"]').addClass('active');
-           
-                // $("#portfolios .card").css({"animation-name":"anim3","animation-duration":"3s"});
-           
-            
-        }
+    PageClick();
+    $('#download').attr({target: '_blank', 
+    href  : 'PHAMPHUOCSANG_cv.pdf'});
 
-        if (cur_pos === 0) {
-            nav.find('a').removeClass('active');
-            sections.removeClass('active');
-            
-        }
-        else{
-            $('#home').addClass('active');
-            nav.find('a[href="#home"]').addClass('active');
-           
-        }
-    });
-   
 });

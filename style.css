@@ -1,765 +1,345 @@
-body {
-    font-family: 'Lato', sans-serif;
-    background: rgb(15, 15, 15);
-}
-.theline 
+body
 {
-border-right: 6px solid green;
-  height: 2600px;
-  position: absolute;
-    right:50%;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto Slab', serif;
+    padding: 0;
+    margin: 0;
+}
+
+nav , nav ul
+{
+  list-style-type: none;
+  width: 20%;
+  background-color: #C9D6DF;
+  position: fixed;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
   
 }
-.ver-line 
+
+nav ul li, nav ul li:visited
 {
-border-bottom: 6px solid green;
-    width: 150px;
-  position: absolute;
-    right:50%;
+  
+  display: block;
+  color:#52616B;
+  margin:20px auto;
+  font-size: 20px;
   
 }
-#portfolios #card-odd-top
+nav ul li:hover
 {
-    
-    margin-right: -200px;
-    margin-left:67%;
-
-    
+  display: block;
+  color:#F0F5F9;
+  background-color: #52616B;
+  text-decoration: none;
+  font-size: 20px;
+  cursor:context-menu;
+  border-radius: 10px;
+  
 }
-#portfolios #card-odd
+.active
 {
-    
-    margin-right: -200px;
-    margin-left:67%;
-
- margin-top: -200px;
-    
-}
-#portfolios #card-even
-{
-    
-   margin-top: -200px;
-   margin-left: -20px;
-   margin-right:50%;
-    
-}
-.cd-timeline
-{
-  position: relative;
-  padding: 2em 0;
-  margin-top: 2em;
-  margin-bottom: 2em;
-}
-.cd-timeline-block
-{
-  position: relative;
-    margin: 2em 0;
-}
-.cd-timeline-content 
-{
-  position: relative;
-  margin-left: 60px;
-  background-color: #eee;
-  border-radius: 0.50em;
-}
-#whatido .quotes{
-    width: 90vw;
-    padding:20px;
-    padding-left: 10vw;
-
-    
-
-    display: block;
-}
-#certificate .certi 
-{
-    height: 30%;
-    width: 30%;
-    padding-top: 15px;
-    padding: 2%;
-}
-#certificate .scroll-certi {
-    text-align: center;
-    
-    padding:4px;
-    background-color: #2f3030;
-    width: 90vw;
-    max-height: 600px;
-    height: 100%;
-    
-    overflow-y: scroll;
-    text-align:justify;
-}
-
-header {
-    height:100vh;
-    background: rgb(15, 15, 15);
-}
-html {
-    scroll-behavior: smooth;
-  }
-#myNavbar {
-    position:absolute;
-    left:40%;
-    top:0;
-    margin-left: -40vh;
-}
-#myNavbar a {
-    display: block;
-    width: fit-content;
-    margin-inline: 20px;
-
-}
-.text-light{
-    color:#eee;
-    font-size:14px;
-}
-.nav-menu {
-    background: black;
-    padding:30px ;
-    transition: all .7s;
-}
-.btn-cv
-{
-    border: 4px solid #eee;
-    background-color: black;
-    font-size: 25px;
-    padding:0 0.5rem;
-    margin-left: 25vh;
-    border-radius: 5px;
-   animation-name: anim3;
-   animation-duration: 3s;
-}
-.btn-cv:hover
-{
-    
-    border: 4px solid #5cb85c;
-    background-color: #5cb85c;
-}
-.menu-item
-{
-    
-    font-size: 25px;
-    letter-spacing: 1px;
-    color:#eee;
-    text-decoration: none;
-    text-align: center;
  
-    
-}
-.menu-item:hover{
-
-    color:#5cb85c;
-    text-decoration: underline #5cb85c;
-
-}
-.active{
-    color:#5cb85c;
-    text-decoration: underline #5cb85c;
+  color:#F0F5F9;
+  background-color: #52616B;
+  border-radius: 10px;
 }
 
-
-.custom-navbar {
-    /* 5px => top, bottom */
-    /* 30px left, right */
-    padding: 5px 30px;
-    height: 8%;
-}
-
-.banner {
-    position:absolute;
-    top:25%;
-    
-}
-.column {
-    float: left;
-    width:50%;
-}
-.row {
-    display: flex;
-    margin-left:30vh;
-}
-
-.pic {
-    margin-left:60vh;
-    margin-top: -50vh;
-    
-    
-}
-.word {
-    margin-left: -20vh;
-}
-#home .iam {
-    display:inline-block;
-    padding-right:30px;
-    padding-left:30px;
-    background-color: #5cb85c;
-    border-radius: 5px;
-    
-}
-.home-choice > li 
+.display-content
 {
-    display: inline-block;
-    padding: 40px 45px;
+  padding-top:80%;
 }
-.home-choice > ul
+.display-content h1 
 {
-    padding: 150vw;
+  color:#1E2022;
+  padding-bottom: 30px;
 }
-#home li {
-    margin-top: 40px;
-    text-decoration: none;
-}
-#home li a{
-    text-decoration: none;
-    font-size: 25px;
-    padding-left:20px;
-}
-#home li a:hover {  
-    text-decoration: underline;
-}
-
-section {
-    background-color: rgb(15, 15, 15);
-    
-}
-#whatido {
-    padding-top: 3%;
-    margin-left: -35vh;    
-}
-#whatido .topic {
-    font-size:50px;
-}
-.underline {
-    border: 4px solid #eee;
-}
-#whatido .layers {
-    margin-left: 10vh;
-    margin-top:-5%;
-}
-#portfolios {
-    margin-left: -32vh;
-}
-.portfolios-head {
-    color:#a1d3f0;
-    text-decoration: none;
-    font-size: 35px;
-}
-.portfolios-head:hover {
-
-    transition: .4s;
-    text-decoration: underline;
-}
-.portfolios-head:active {
-    color:#70aed2;
-    text-decoration: none;
-    font-size: 35px;
-}
-.portfolios-deco {
-    
-    margin-top: 1%;
-    margin-left: 4%;
-}
-#portfolios .card
+#viewpage
 {
-    background-color: #2f3030;
-    height: 380px;
+  background-color: #F0F5F9;
+overflow-y: scroll;
+  width: 80%;
+  left:20%;
+  position: fixed;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-
-#about {
-    margin-left: -35vh;
-}
-#about .card {
-    background-color: #2f3030;
-    height: fit-content;
-}
-#about .lineedu {
-    margin-bottom:5%;
-    
-}
-#about li {
-    font-size:15px;
-}
-
-@keyframes anim {
-    0% {
-        transform: translateX(200px) ;
-        opacity: 0;
-    }
-    100% {
-        transform:translate(0);
-        opacity: 1;
-    }
-}
-@keyframes anim2 {
-    0% {
-        transform: translateX(-200px) ;
-        opacity: 0;
-    }
-    100% {
-        transform:translate(0);
-        opacity: 1;
-    }
-}
-@keyframes anim3 {
-    0% {
-        
-        opacity: 0;
-    }
-    100% {
-       
-        opacity: 1;
-    }
-}
-
-#kil {
-    animation-name: anim;
-    animation-duration: 2s;
-
-}
-.text-info {
-    color: #6bddff!important;
-}
- #home h1,h2,h3  {
-    animation-name: anim2;
-    animation-duration: 2s;
-}
-
- #home li{
-    animation-name: anim3;
-    animation-duration: 2s;
-}
-
-.changaeing {
-    animation-name: anim3;
-    animation-duration: 2s;
-}
-#home button{
-    border: 4px solid #eee;
-    background-color: black;
-    font-size: 25px;
-    padding:0 0.5rem;
-    margin-left: 25vh;
-    border-radius: 5px;
-   animation-name: anim3;
-   animation-duration: 3s;
-}
-#home button:hover{
-    
-    border: 4px solid #5cb85c;
-    background-color: #5cb85c;
-    
-}
-.dark-footer {
-    color:#616363e7;
-    height:30px;
-}
-@media only screen and (min-width:280px) and (max-width:350px)
+#home 
 {
-    
-    header{
-        margin-bottom: -10vh;
-    }
-    .pic {
-        display: none;
-    }
-    .navbar {
-        display: none;
-    }
-    .banner {
-        margin-top: -20vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:150%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: 5vh;
-        
-    }
-    #whatido .col{
-        margin-left: 5vw;
-    }
-    #whatido .layers {
-        margin-left: 60vw;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-       margin-left: -8vh;
-   }
-  #about div>span {
-      margin-top: 3px;
-  }
-   #portfolios .card {
-       height:fit-content;  
-   }
-   
-}
-@media only screen and (min-width:350px) and (max-width:500px)
-{
-    
-    header{
-        margin-bottom: -10vh;
-    }
-    .pic {
-        display:none;
-    }
-    .navbar {
-        display: none;
-    }
-    .banner {
-        margin-top: -20vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:150%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: 5vh;
-        
-    }
-    #whatido .col{
-        margin-left: 5vw;
-    }
-    #whatido .layers {
-        margin-left: 60vw;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-       margin-left: -8vh;
-   }
-  #about div>span {
-      margin-top: 3px;
-  }
-   #portfolios .card {
-       height:fit-content;  
-   }
-   
-}
-@media only screen and (min-height:812px) and (max-height:813px)
-{
-    
-    header{
-        margin-bottom: -30vh;
-    }
-    .pic {
-        display: none ;
-    }
-    .navbar {
-        display: none;
-    }
-    .banner {
-        margin-top: -20vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:150%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: 5vh;
-        
-    }
-    #whatido .col{
-        margin-left: 5vw;
-    }
-    #whatido .layers {
-        margin-left:70vw;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-       margin-left: -8vh;
-   }
-  #about div>span {
-      margin-top: 3px;
-  }
-   #portfolios .card {
-       height:fit-content;  
-   }
-   
-}
-@media only screen and (min-width:500px) and (max-width:760px)
-{
-    
-    header{
-        margin-bottom: -10vh;
-    }
-    .pic {
-        display: none;
-    }
-    .navbar {
-        display: none;
-    }
-    .banner {
-        margin-top: -20vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:120%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: 5vh;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-      
-   }
-   #about .card {
-      margin-left: -7vw;
-     margin-right: 3vw;
-     width: 90vw;
-   }
-   #portfolios .card {
-       height:fit-content;  
-   }
-  
-   #whatido p{
-      margin-left: 10vw;
-   }
-    #whatido .col{
-        margin-left: -5vw;
-    }
-    #whatido .layers {
-        margin-left: 40vw;
-    }
-  
-   
-}
-@media only screen and (min-width:720px) and (max-width:999px)
-{
-    
-    header{
-        
-        margin-bottom: -50vh;
-    }
-
-   #kil {
-       display: none;
-       
-   }
-   .navbar{
-       display: none;
-   }
-  
-   .custom-navbar{
-       display: none;
-   }
-   
-   
-    .navbar {
-        display: inline-block;
-    }
-    .banner {
-        margin-top: -20vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:150%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: 12vh;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-      
-   }
-   #about .card {
-      margin-left: -7vw;
-     margin-right: 3vw;
-     width: 90vw;
-   }
-   #portfolios .card {
-       height:fit-content;  
-   }
-  
-   #whatido p{
-      margin-left: 10vw;
-   }
-    #whatido .col{
-        margin-left: -5vw;
-    }
-    #whatido .layers {
-        margin-left: 40vw;
-    }
-  
-   
-}
-@media only screen and (min-width:735px) and (max-width:999px)
-{
-    
-    header{
-        
-        margin-bottom: -50vh;
-    }
-
-   #kil {
-       display:none;
-       
-   }
-   .navbar{
-       display: none;
-   }
-  
-   .custom-navbar{
-       display: none;
-   }
-   
-   
-    .navbar {
-        display: inline-block;
-    }
-    .banner {
-        margin-top: -20vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:150%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: 12vh;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-      
-   }
-   #about .card {
-      margin-left: -7vw;
-     margin-right: 3vw;
-     width: 90vw;
-   }
-   #portfolios .card {
-       height:fit-content;  
-   }
-  
-   #whatido p{
-      margin-left: 10vw;
-   }
-    #whatido .col{
-        margin-left: -5vw;
-    }
-    #whatido .layers {
-        margin-left: 40vw;
-    }
-  
-   
-}
-@media only screen and (min-width:1000px) and (max-width:1050px)
-{
-    body{
-        margin-left: 10vw;
-    }
-    header{
-        margin-bottom: -50vh;
-    }
-   #kil {
+  vertical-align: middle;
+  display: inline;
+  text-align: left;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  left:20%;
  
-       display:block;
-        margin-left: -40vw;
-        margin-top: 30vh;
-        width:20vw;
-       
-   }
-   
-   .navbar {
-       margin-left: 25%;
-   }
-   
-   
-    
-    .banner {
-        margin-top: -15vh;
-        margin-left: -5vh;
-    }
-    #home .column {
-        width:150%;
-        
-    }
-    #home h1{
-        font-size:30px;
-    }
-    #whatido {
-        margin-top: -5vh;
-    }
-   #home a button {
-        size:10%;   
-        margin-left: 5vh;
-        margin-top: 5px;
-   }
-   #about .card {
-       display: inline-block;
-      
-   }
-   #about .card {
-      margin-left: -7vw;
-     margin-right: 3vw;
-     width: 90vw;
-   }
-   #portfolios .card {
-       height:fit-content;  
-   }
   
-   #whatido p{
-      margin-left: 10vw;
-   }
-    #whatido .col{
-        margin-left: -5vw;
-    }
-    #whatido .layers {
-        margin-left: 40vw;
-    }
+}
+#home img
+{
+  border-radius: 50%;
+  width: 20%;
+  height: 20%;
+  display: block;
+  margin-left: 5%;
+  float:left;
+  margin-top: 15%;
+
+}
+
+.content
+{
+  padding:19% 30%;
+}
+
+.icon svg 
+{
+ margin: 10px 20px;
+ color: #1E2022;
+}
+.icon svg:hover
+{
+ margin: 10px 20px;
+ color: #52616B;
+}
+
+.hidden 
+{
+  display: none;
+}
+#about
+{
+  margin-top: 20%;
+  padding:0 15px;
+}
+#info-tag
+{
+  display: block;
+  width:50%;
+  float:left;
+  text-align: justify;
   
-   
+}
+
+#writter
+{
+  display: block;
+  float: right;
+  width:45%;
+  text-align: left;
+  padding:10px 10px;
+}
+#info-tag button,#info-tag button:visited 
+{
+  background-color: #C9D6DF;
+  color:#1E2022;
+  margin:10px 10%;
+  border-radius: 10px;
+  padding:10px 10px;
+  font-size: 15px;
+}
+#info-tag button:hover 
+{
+  background-color: #52616B;
+  color:#F0F5F9;
+}
+#info-tag a, #info-tag a:visited{
+  background-color: #C9D6DF;
+  color:#1E2022;
+  border-radius: 10px;
+  padding:10px 10px;
+  border:2px solid #1E2022;
+}
+#info-tag a:hover{
+  background-color: #52616B;
+  color:#F0F5F9;
+
+}
+#learn-more 
+{
+  
+  background-color: #F0F5F9;
+  color:#1E2022;
+  height: 90vh;
+  width: 90vw;
+  position: absolute;
+  z-index: 15;
+  border:2px solid #1E2022;
+  border-radius: 10px;
+  left:5%;
+  top:5%;
+  overflow-y: scroll;
+}
+#learn-more svg
+{
+  background-color: #F0F5F9;
+  color: #1E2022;
+  overflow-y: scroll;
+  border-radius: 10px;
+  float:right;
+
+}
+#edu 
+{
+
+  margin-top: 4%;
+  padding-left: 2%;
+  
+ width: 50%;
+  float:left;
+ 
+}
+#edu p ,#volun p
+{
+ 
+  font-size: 20px;
+}
+#edu>span, #volun>span 
+{
+  display: block;
+  padding-left:5%;
+  margin-bottom: 10px;
+  margin-top: 0 ;
+}
+#learn-more h3 
+{
+  text-decoration: underline;
+}
+#learn-more li a,#learn-more li a:visited 
+{
+  color:#4174aa;
+}
+#volun
+{
+  padding-top:3px;
+  width: 50%;
+  float: right;
+}
+#edu button 
+{
+  background-color: #52616B;
+  color: #F0F5F9;
+  border-radius: 20px;
+  padding:5px 5px;
+}
+#certi 
+{
+  display: block;
+  text-align: center;
+}
+#certi img
+{
+  padding :5px 5px;
+  width: 400px;
+  height: 250px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+ 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 3px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #1E2022;
+  border-radius: 10px;
+}
+#portfolios 
+{
+  overflow-x: hidden;
+  margin: 0;
+  padding:0;
+}
+#portfolios .content 
+{
+  display: inline;
+  width: 50%;
+  clear: both;
+  padding:10px 10px;
+ 
+
+}
+#portfolios .content
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin:10px 10px;
+  padding:10px 10px;
+}
+#portfolios a 
+{
+  color: #4174aa;
+  
+}
+#portfolios a>h5 
+{
+  font-size: 30px;
+}
+#portfolios .portfolios-deco span
+{
+  color: #3390d3;
+}
+#portfolios ul li
+{
+  
+  text-align: left;
+}
+
+.card 
+{
+
+  flex: 0 0 45%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin:10px 10px;
+}
+#contact .contact-form 
+{
+  margin-top: 20%;
+  display: block;
+  text-align: left;
+  margin-left: 30%;
+  
+
+}
+#contact label
+{
+  margin-top:20px;
+  padding-top :10px;
+}
+fieldset{
+  width: max-content;
+  padding:10px 10px;
+  border: 2px solid #52616B;
+}
+
+
+#submitbtn 
+{
+  background-color: #C9D6DF;
+  color:#1E2022;
+  margin:10px auto;
+  border-radius: 10px;
+  padding:10px 10px;
+  font-size: 15px;
+}
+#submitbtn:hover 
+{
+  background-color: #52616B;
+  color:#F0F5F9;
 }
