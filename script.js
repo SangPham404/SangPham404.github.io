@@ -1,3 +1,7 @@
+window.addEventListener("load", function () {
+    $("#loading").fadeOut(1000);
+    
+});
 function PageClick() {
     $('#about').css('display', 'none');
     $('#portfolios').css('display', 'none');
@@ -10,17 +14,19 @@ function PageClick() {
         $('#about').css('display', 'none');
         $('#portfolios').css('display', 'none');
         $('#contact').css('display', 'none');
-        $('#' + page).css('display', 'block');
+        $('#' + page).fadeIn(400).css('display', 'block');
     });
 
 }
 function LearnMoreInfo()
 {
-    $('#learn-more').removeClass('hidden');
+    $('#learn-more').fadeIn(400).removeClass('hidden');
+
 }
 function CloseInfo()
 {
-    $('#learn-more').addClass('hidden');
+    $('#learn-more').fadeOut(400).addClass('hidden');
+    
 }
 $(document).ready(function () {
 
