@@ -357,3 +357,213 @@ fieldset input ,fieldset textarea {
   background-color: #52616B;
   color:#F0F5F9;
 }
+@media only screen and (min-device-width: 260px) and (max-device-width: 760px) {
+  
+  nav , nav ul
+  {
+  list-style-type: none;
+  width: 100%;
+  background-color: #C9D6DF;
+  position: sticky;
+  margin-bottom: 10px;
+  text-align: center;
+ 
+  }
+  nav ul li, nav ul li:visited
+{
+  
+  display: inline;
+  color:#52616B;
+  margin:auto 5px;
+  font-size: 20px;
+  
+}
+nav ul li:hover
+{
+
+  color:#F0F5F9;
+  background-color: #52616B;
+  display: inline;  
+ 
+  
+}
+.active
+{
+  display: flexbox;
+  color:#F0F5F9;
+  background-color: #52616B;
+  border-radius: 10px;
+  padding:5px;
+}
+
+.display-content
+{
+  padding-top:20px;
+  padding-bottom: 10px;
+}
+.display-content h1 
+{
+  display: none;
+}
+#viewpage
+{
+  background-color: #F0F5F9;
+  overflow-y: scroll;
+  width: 100%;
+  position: relative;
+  height:80%;
+  text-align: center;
+  margin-left: -20%;
+  
+}
+
+#home 
+{
+  vertical-align: middle;
+  
+  text-align: center;
+  height: 100%;
+  margin-left: -20%;
+  width: 100%;
+}
+#home figure 
+{
+  padding-left:30%;
+
+}
+#home img
+{
+  border-radius: 50%;
+  width: 40%;
+  height: 40%;
+  display: block;
+  float:none;
+
+}
+.content
+{
+  padding:10px 6px;
+
+}
+#about
+{
+  margin-top: 10%;
+  padding:0 15px;
+  
+} 
+#info-tag
+{
+  display: block;
+  width:100%;
+  float:none;
+  text-align: justify;
+  
+}
+
+#writter
+{
+  display: block;
+  width:100%;
+  float:none;
+  text-align: left;
+  padding:10px 10px;
+}
+#info-tag button,#info-tag button:visited 
+{
+  display: block;
+  margin: 10px auto;
+  margin-left: 25%;
+}
+#info-tag a, #info-tag a:visited
+{
+  display: block;
+  width: fit-content;
+  margin: 5px auto;
+  margin-left: 25%;
+
+}
+#edu
+{
+  padding-left:10px;
+  float: none;
+  width:100%;
+  margin-bottom:10px ;
+}
+#volun
+{
+  padding-top:3px;
+  float: none;
+  width:100%;
+  padding-left:10px;
+}
+#certi img
+{
+  padding :5px 5px;
+  width: 250px;
+  height: 150px;
+}
+#portfolios .content 
+{
+  display: inline;
+  width: 100%;
+  clear: both;
+  padding:10px 10px;
+ 
+
+}
+#portfolios .content
+{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin:10px 10px;
+  padding:10px 10px;
+}
+.card 
+{
+
+  flex: 0 0 95%;
+  padding: 10px;
+  box-sizing: border-box;
+  margin:10px 5px;
+}
+#contact .contact-form 
+{
+  margin-top: 15%;
+  display: block;
+  text-align: left;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+fieldset{
+  width: max-content;
+  padding:10px 10px;
+  border: 2px solid #52616B;
+  width: 100%;
+}
+
+  form {
+    
+    overflow: hidden;
+  }
+
+fieldset label {
+  float: left;
+  clear: right;
+}
+fieldset input ,fieldset textarea {
+  float: right;
+  clear: both;
+  width: 90%;
+}
+#submitbtn 
+{
+  background-color: #C9D6DF;
+  color:#1E2022;
+  margin:10px 35%;
+  border-radius: 10px;
+  padding:10px 10px;
+  font-size: 15px;
+}
+}
