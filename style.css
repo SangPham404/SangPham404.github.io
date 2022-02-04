@@ -371,7 +371,7 @@ fieldset input ,fieldset textarea {
   background-color: #52616B;
   color:#F0F5F9;
 }
-@media only screen and (min-device-width: 260px) and (max-device-width: 760px) {
+@media only screen and (min-width: 260px) and (max-width: 760px) {
   #loading img 
 {
   position: absolute;
